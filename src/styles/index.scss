@@ -142,6 +142,7 @@ body {
   border: 1px solid $color-gray-light;
   border-radius: $border-radius-s;
   background-color: $color-white;
+  transition: transform $transition-duration;
 
   &__inner {
     padding: $spacing-xl $spacing-s $spacing-s;
@@ -223,6 +224,7 @@ body {
   /* hover effects – specific selectors LAST */
   &:hover .card__inner {
     transform: scale(1.2);
+    z-index: 10; // Чтобы не перекрывалась соседями
   }
 
   &:hover .card__inner .card__title {
