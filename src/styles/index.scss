@@ -146,7 +146,7 @@ body {
 
   &__inner {
     padding: $spacing-xl $spacing-s $spacing-s;
-    transition: transform $transition-duration;
+
   }
   &__image {
     display: block;
@@ -216,9 +216,9 @@ body {
       color $transition-duration;
 
     &:hover {
-      background-color: $color-white;
-      color: $color-accent;
-    }
+    transform: scale(1.2); // Теперь масштабируется вся карточка целиком
+    z-index: 10;           // Поднимаем над соседями
+  }
   }
 
   /* hover effects – specific selectors LAST */
@@ -227,7 +227,7 @@ body {
     z-index: 10; // Чтобы не перекрывалась соседями
   }
 
-  &:hover .card__inner .card__title {
+  &:hover .card__title {
     color: $color-title-hover;
   }
 }
